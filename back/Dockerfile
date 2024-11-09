@@ -11,8 +11,13 @@ RUN npm install
 
 COPY back .
 
+# Adicionando o wait-for-it.sh ao Dockerfile
+COPY ./back/wait-for-it.sh /usr/local/bin/wait-for-it.sh
+RUN chmod +x /usr/local/bin/wait-for-it.sh
+
+
 RUN npm run build
 
 EXPOSE 3000
 
-CMD ["sh", "-c", "npm run migration:run && npm run start:prod"]
+CMD ["sh", "-c", "npm run start:prod"]
