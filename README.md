@@ -34,7 +34,7 @@ $ cd <NOME_DO_PROJETO>
 ## backend
 ```bash
 $ cd back
-$ cp env.example .env
+$ cp .env.example .env
 ```
 Defina as variáveis de ambiente caso nao queira a usar as de exemplo.
 
@@ -43,7 +43,7 @@ Defina as variáveis de ambiente caso nao queira a usar as de exemplo.
 ```bash
 $ cd ..
 $ cd frontend
-$ cp env.example .env
+$ cp .env.example .env
 ```
 Defina as variáveis de ambiente caso nao queira a usar as de exemplo.
 
