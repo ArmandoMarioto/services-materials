@@ -160,3 +160,24 @@ Certifique-se de que o contêiner do banco de dados (SQL Server) está em execu�
 ```bash
 $ docker-compose up -d db
 ```
+
+## 4. Erro: 
+
+`/usr/bin/env: 'bash\r': No such file or directory`
+
+Este erro ocorre quando o script tem quebras de linha no formato Windows (CRLF) ao invés de Unix (LF). Isso pode acontecer se o script for editado em um editor no Windows.
+
+#### Solução:
+- Se você estiver no Windows, abra o arquivo no **Notepad++** ou **VS Code** e salve-o com quebras de linha no formato **LF**.
+- **No Notepad++**:
+  - Vá em **Editar** -> **Converter quebras de linha para** -> **Unix (LF)**.
+  - Salve o arquivo.
+- **No VS Code**:
+  - No canto inferior direito, clique onde diz **CRLF** e selecione **LF**.
+  - Salve o arquivo.
+- Alternativamente, no terminal, você pode usar `dos2unix` ou `sed` para remover o caractere de quebra de linha `\r`.
+
+```bash
+dos2unix wait-for-it.sh
+# ou
+sed -i 's/\r//' wait-for-it.sh
