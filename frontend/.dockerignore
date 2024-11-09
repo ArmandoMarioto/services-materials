@@ -1,0 +1,29 @@
+# Ignorar node_modules
+node_modules
+
+# Ignorar arquivos de log
+*.log
+
+# Ignorar arquivos de configuração de ambiente
+.env
+
+# Ignorar diretórios de build
+dist
+build
+
+# Ignorar arquivos de teste
+coverage
+*.test.ts
+*.spec.ts
+
+# Ignorar arquivos do editor
+.vscode
+.idea
+
+# Ignorar arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos temporários
+tmp
+temp
